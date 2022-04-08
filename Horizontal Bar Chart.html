@@ -1,0 +1,173 @@
+<html>
+
+<head>
+  <title>Sayyid Nur Cahyo Abdul Jalil - 06211940000089</title>
+</head>
+
+<body>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const labels = ['Australia',
+      'Bangladesh',
+      'Bhutan',
+      'Brunei Darussalam',
+      'Cambodia',
+      'China',
+      'Fiji',
+      'French Polynesia',
+      'India',
+      'Indonesia',
+      'Japan',
+      'Korea North',
+      'Korea South',
+      'Lao People',
+      'Malaysia',
+      'Mongolia',
+      'Myanmar',
+      'Nauru',
+      'Nepal',
+      'New Caledonia',
+      'New Zealand',
+      'Pakistan',
+      'Papua New Guinea',
+      'Philippines',
+      'Samoa',
+      'Singapore',
+      'Solomon Islands',
+      'Sri Lanka',
+      'Thailand',
+      'Timor-Leste',
+      'Tonga',
+      'Viet Nam',
+      'Wallis and Futuna Islands',
+    ];
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Total Ecological Footprint',
+          data: [9.31,
+            0.72,
+            4.84,
+            4.06,
+            1.21,
+            3.38,
+            2.9,
+            4.73,
+            1.16,
+            1.58,
+            5.02,
+            1.17,
+            5.69,
+            1.22,
+            3.71,
+            6.08,
+            1.43,
+            2.94,
+            0.98,
+            3.58,
+            5.6,
+            0.79,
+            1.91,
+            1.1,
+            2.77,
+            7.97,
+            1.29,
+            1.32,
+            2.66,
+            0.48,
+            2.7,
+            1.65,
+            2.07,
+          ],
+          borderColor: 'rgb(255, 99, 132)',
+          backgroundColor: 'rgb(255, 200, 132)',
+        },
+        {
+          label: 'Total Biocapacity',
+          data: [16.57,
+            0.38,
+            5.27,
+            2.87,
+            1.09,
+            0.94,
+            2.37,
+            1.37,
+            0.45,
+            1.26,
+            0.72,
+            0.6,
+            0.68,
+            1.62,
+            2.41,
+            15.66,
+            1.84,
+            0.19,
+            0.59,
+            7.67,
+            10.14,
+            0.35,
+            3.92,
+            0.54,
+            1.93,
+            0.05,
+            4.36,
+            0.44,
+            1.24,
+            1.78,
+            1.48,
+            1,
+            1.51,
+          ],
+          borderColor: 'rgb(150, 134, 255)',
+          backgroundColor: 'rgb(150, 235, 255)',
+        }
+      ]
+    };
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        indexAxis: 'y',
+        // Elements options apply to all of the options unless overridden in a dataset
+        // In this case, we are setting the border of each horizontal bar to be 2px wide
+        elements: {
+          bar: {
+            borderWidth: 2,
+          }
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'right',
+          },
+          title: {
+            display: true,
+            text: 'Total Ecological Footprint vs Total Biocapacity in Asia-Pacific Country',
+            font: {
+              size: 20
+            }
+          },
+          subtitle: {
+            display: true,
+            text: ['Ecological footprint = Kebutuhan aset ekologis untuk menghasilkan SDA dan menyerap limbahnya',
+              'Biocapacity = Produktivitas aset ekologis suatu negara'],
+            color: 'blue',
+          }
+        }
+      },
+    };
+
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+</body>
+
+</html>
